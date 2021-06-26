@@ -33,30 +33,29 @@ sudo apt-get update && sudo apt-get upgrade -y
 ## Project Description  
 Directory Structure  
 ```
-.Build-My-World                    # Build My World Project 
+.Gazebo-Robot-World                  # Build My World Project 
 ├── model                          # Model files 
-│   ├── gokart
+│   ├── office
 │   │   ├── model.config
 │   │   ├── model.sdf
-│   ├── myfloorplan
-│   │   ├── model.config
-│   │   ├── model.sdf
-│   ├── robot
+│   ├── wheeled_robot_1
 │   │   ├── model.config
 │   │   ├── model.sdf
 ├── script                         # Gazebo World plugin C++ script      
-│   ├── welcome.cpp
+│   ├── hello.cpp
+├── screenshots                         # Gazebo World plugin C++ script      
+│   ├── gazebo_world.png
 ├── world                          # Gazebo main World containing models 
-│   ├── myoffice.world
+│   ├── robot_world
 ├── CMakeLists.txt                 # Link libraries 
 └──   
 ```
-- [myoffice.world](/world/myoffice.world): Gazebo world file that includes the models.  
-- [myfloorplan](/model/myfloorplan): A single floor structure designed in the Building Editor tool of Gazebo.  
-- [gokart](/model/gokart): A go kart designed in the Model Editor tool of Gazebo.  
-- [robot](/model/robot): A robot designed in the Model Editor tool of Gazebo.  
-- [welcome.cpp](/script/welcome.cpp): Gazebo world plugin C++ script.  
-- [Overview.png](/screenshots/Overview.png): A screenshot of the final result.  
+- [robot_world.world](/world/robot_world.world): Gazebo world file that includes the models.  
+- [office](/model/office): A single floor structure designed in the Building Editor tool of Gazebo.  
+<!-- - [gokart](/model/gokart): A go kart designed in the Model Editor tool of Gazebo.   -->
+- [wheeled_robot_1](/model/wheeled_robot_1): A robot designed in the Model Editor tool of Gazebo.  
+- [hello.cpp](/script/hello.cpp): Gazebo world plugin C++ script.  
+- [gazebo_world.png](/screenshots/gazebo_world.png): A screenshot of the final result.  
 - [CMakeLists.txt](CMakeLists.txt): File to link the C++ code to libraries.  
 ## Run the project  
 * Clone this repository
@@ -70,12 +69,12 @@ cmake .. && make
 ```
 * Export your plugin folder in the terminal so your world file can find it:  
 ```bash
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/RoboND-Term1-P1-Build-My-World/build
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}: YOUR_PATH/Gazebo-Robot-World/build
 ```
 * Launch the world file in Gazebo to load both the world and plugin  
 ```bash
-cd /home/workspace/github/RoboND-Term1-P1-Build-My-World/world/
-gazebo myoffice.world
+cd YOUR_PATH/Gazebo-Robot-World/world/
+gazebo robot_world
 ```
 
 ## Tips  
