@@ -7,7 +7,7 @@ namespace gazebo
 	{
 		public: WorldPluginWheeledRobot(): WorldPlugin()
 		{
-			printf("Hello Instructor!\n");
+			printf("Hello Kenechi!\n");
 		}		
 		
 		// This is mandatory to recieve information from the world file
